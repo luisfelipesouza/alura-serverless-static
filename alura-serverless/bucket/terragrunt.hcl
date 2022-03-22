@@ -10,8 +10,5 @@ terraform {
 
 inputs = {
   bucket_name     = "alura-serverless-fullstak"
-  application     = "alura-med"
-  cost-center     = "alura"
-  deployed-by     = "terragrunt"
   content_path    = local.config.content_path
 }

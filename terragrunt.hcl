@@ -35,3 +35,12 @@ provider "aws" {
 }
 EOF
 }
+
+inputs = merge (
+  {
+    application     = "alura-med"
+    cost-center     = "alura"
+    deployed-by     = "terragrunt"
+  }, 
+  local.config
+)
