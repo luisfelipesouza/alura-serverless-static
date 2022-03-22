@@ -1,8 +1,5 @@
 include {
-    path = find_in_parent_folders()
-}
-locals {
-  config = yamldecode(file(find_in_parent_folders(".config.yaml")))
+  path = find_in_parent_folders()
 }
 terraform {
   source  = "git::git@github.com:luisfelipesouza/tf-module-static-site.git"
@@ -10,5 +7,4 @@ terraform {
 
 inputs = {
   bucket_name     = "alura-serverless-fullstak"
-  content_path    = local.config.content_path
 }

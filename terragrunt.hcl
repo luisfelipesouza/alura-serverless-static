@@ -1,5 +1,6 @@
 locals {
   config          = yamldecode(file(".config.yaml"))
+  content_path    = local.config.content_path
 }
 
 remote_state {
